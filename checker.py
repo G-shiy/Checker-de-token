@@ -1,6 +1,5 @@
 import string
-import requests, os, threading, sys, time, datetime, os.path
-import colorama
+import requests, os, sys, time, datetime, os.path
 from colorama import Fore, init, Back, Style
 
 
