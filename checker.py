@@ -56,9 +56,9 @@ def CheckNumber() -> str:
             try:
                 if get_phone != None:
                     print(Fore.WHITE+"["+Style.BRIGHT + Fore.GREEN + Back.BLACK+"+"+Fore.WHITE+"] "+Fore.RESET + token + ' | ' + get_phone + ' | ' + date_create)
-                    if not os.path.exists("numeros/verificado.txt"):
-                        open('numeros/verificado.txt', 'a+')
-                    with open('numeros/verificado.txt','a',encoding='utf8') as f:
+                    if not os.path.exists("numeros/verified.txt"):
+                        open('numeros/verified.txt', 'a+')
+                    with open('numeros/verified.txt','a',encoding='utf8') as f:
                         f.write("\n\n####################################################")
                         f.write(f'\n\ntoken de número #{i}\n')
                         f.write(f'Token: {token}\n')
@@ -85,8 +85,8 @@ def EraseText() -> None:
 def EraseAll() -> True or False:
 	erase_Valid = input("Quer apagar os tokens válidos? Y/N ")
 	erase_Invalid = input("Quer apagar os tokens inválidos? Y/N ")
-	erase_Verified = input("Quer apagar os números verificados? Y/N ")
-	erase_NoVerified = input("Quer apagar os números não verificados? Y/N ")
+	erase_Verified = input("Quer apagar os números verifieds? Y/N ")
+	erase_NoVerified = input("Quer apagar os números não verifieds? Y/N ")
 
 	if erase_Valid == 'Y' or 'y':
 		with open('tokens/valid.txt', 'r+') as f:
@@ -99,8 +99,8 @@ def EraseAll() -> True or False:
 			f.truncate(0)
 	else:
 		pass
-	if erase_verificado == 'Y' or 'y':
-		with open('numeros/verificado.txt', 'r+') as f:
+	if erase_Verified == 'Y' or 'y':
+		with open('numeros/verified.txt', 'r+') as f:
 			f.truncate(0)
 	else:
 		pass
